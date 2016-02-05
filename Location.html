@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Art of Detail - Location</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Art of Detail automotive detailing is located at 293 Lao Street Unit E in Kahului Hawaii. ">
+	<meta name="keyword" content="Art of Detail, auto detailing, detailing, detail,  Kahului, Lahaina, Kahului auto detailing, Lahaina auto detailing, automotive detailing">
+	<meta charset="UTF-8">
+	<link href='https://fonts.googleapis.com/css?family=Satisfy|Quicksand:400,700|Questrial' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+
+	<input type="checkbox" id="menuToggle">
+	<label for="menuToggle" class="ham_icon"></label>
+
+	<nav id="nav">
+		<h1 id="mobile_pg_name">Location</h1>
+	</nav><!-- END NAVIGATION -->
+
+	<aside class="menu">
+		<ul>
+	    	<li><a href="index.html">HOME</a></li>
+	        <li><a href="services.html">SERVICES</a></li>
+	        <li><a href="location.html">LOCATION</a></li>
+	        <li><a href="about_us.html">ABOUT</a></li>
+	    </ul>
+	</aside><!-- END SLIDEOUT MENU -->
+
+	<div class="navmenu">
+		<ul class="navlink">
+		    	<li><a href="index.html">HOME</a></li>
+		        <li><a href="services.html">SERVICES</a></li>
+		        <li><a href="location.html">LOCATION</a></li>
+		        <li><a href="about_us.html">ABOUT</a></li>
+		</ul>
+	</div>
+
+	<div id="hero">
+		<div id="map"></div>
+	</div><!-- END HERO -->
+
+	<main class="about_loc_main loc_pad loc_bkg">
+		<h1 class="loc_head ">LOCATION</h1>
+		<p class="loc_para">Our address is 283 Lalo St. Unit E in Kahului.</p>
+		<h1 class="loc_head ">NEED TO SCHEDULE AN APPOINTMENT?</h1>
+		<p class="loc_para">Give us a call</p>
+		<a class="loc_para" href="tel:808-298-9317">808.298.9317</a>
+	</main>
+
+	<footer>
+		<a href="https://www.facebook.com/ArtofDetail808/"><img class="fb_logo" src="img/fb_icon.svg" alt="facebook logo"></a>
+		<div id="ft_contact">
+			<h1>Art of Detail</h1>
+			<div class="ft_details">
+				<h2><a href="tel:808-298-9317">808.298.9317</a></h2>
+				<p>293 Lao St Unit E <br> Kahului, Hawaii</p>
+			</div>
+		</div>
+	</footer> <!-- END FOOTER -->
+    <script type="text/javascript">
+		function initMap() {
+			var myLatLng = {lat: 20.8853967,lng: -156.4589487};
+			var mapDiv = document.getElementById('map');
+			var map = new google.maps.Map(mapDiv, {
+				zoom: 14,
+				center: myLatLng,
+			});
+
+		var marker = new google.maps.Marker({
+    	position: myLatLng,
+    	map: map,
+    	title: 'Art of Detail',
+    	});
+
+    	var circle = new google.maps.Circle({
+    		strokeColor: '#ececec',
+      		strokeOpacity: 0.0,
+      		strokeWeight: 2,
+      		fillColor: '#000',
+      		fillOpacity: 0.5,
+      		map: map,
+      		center: myLatLng,
+      		radius: 100
+
+    	})
+    }
+    </script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+         async defer></script>
+</body>
+<html>
