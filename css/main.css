@@ -1,0 +1,514 @@
+/*===========Colors===========
+
+  Black: #000
+  Linen White: #ececec
+  White: #fff;
+
+==============================*/
+/*===========fonts===========
+
+  Quicksand
+
+  font-family: 'Quicksand', sans-serif;
+  font-weight:  400, 700;
+
+  Questrial
+
+  font-family: 'Questrial', sans-serif;
+  font-weight:  400;
+
+  Satisfy
+  font-family: 'Satisfy', cursive;
+
+
+==============================*/
+/*===========Global===========*/
+
+h1,
+h2,
+p,
+table {
+    color: #ececec;
+}
+h1,
+h2 {
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+}
+p,
+table {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1em;
+}
+p {
+    font-size: 0.667em;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+li {
+    list-style-type: none;
+}
+body {
+    background-color: #000;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.navmenu {
+    position: relative;
+    top: -700px;
+    font-size: 0;
+}
+/*===========Navigation===========*/
+
+nav {
+    background-color: #000;
+    will-change: transform;
+    z-index: 0;
+    margin: 0;
+}
+nav h1 {
+    font-family: 'Satisfy', cursive;
+    text-align: left;
+    margin: 0.5px 0 0 10px;
+    padding: 13px 0 0 5px;
+    float: left;
+}
+.ham_icon {
+    background-image: url("../img/ham_icon.svg");
+    background-repeat: no-repeat;
+    width: 54px;
+    height: 48px;
+    margin-top: 0;
+    padding: 4px 0 2px 0;
+    float: right;
+    cursor: pointer;
+}
+/*===========Slide Out Nav===========*/
+
+aside {
+    width: 100%;
+    text-align: center;
+}
+aside a {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+    color: #F0EADC;
+}
+aside a:hover {
+    background: #000;
+    color: #fff;
+}
+/*-----------------------------------------*/
+
+.menu {
+    z-index: 3;
+    width: 240px;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    left: -240px;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+#menuToggle {
+    display: none;
+}
+#menuToggle:checked ~ .menu {
+    position: absolute;
+    left: 0;
+}
+/*===========Hero============*/
+
+div#hero img {
+    max-width: 100%;
+    display: block;
+}
+/*===========Slider============*/
+
+div#slider {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    text-align: left;
+}
+div#slider figure img {
+    width: 20%;
+    height: auto;
+    float: left;
+}
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+    20% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+/*Need to append vendor prefixes*/
+
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    left: 0;
+    text-align: left;
+    animation: 20s slidy infinite;
+}
+hr {
+    height: 15px;
+    background-color: black;
+    margin-top: -2px;
+    margin-bottom: -1px;
+    padding: 0;
+}
+/*===========Main===========*/
+
+#main {
+    margin-top: 15px;
+    background-image: url("../img/auto_wash_sml.jpg");
+}
+.main_txt {
+    padding: 1.5em;
+    text-align: center;
+    will-change: transform;
+    z-index: 0;
+}
+.main_txt p {
+    font-size: 1em;
+}
+button {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: none;
+    color: #fff;
+    margin: 1em;
+    padding: 0.667em;
+    border-radius: 5px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1em;
+}
+/*===========Footer===========*/
+
+footer {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 500px 0px 500px #000;
+    clear: both;
+}
+.fb_logo {
+    display: inline;
+    margin: 15px 0 0 10px;
+}
+footer h1 {
+    font-family: 'Satisfy', cursive;
+    text-align: right;
+    line-height: 0;
+}
+footer h2 {
+    line-height: 1.5em;
+    margin: -1%;
+}
+footer p {
+    margin: 0;
+}
+#ft_contact {
+    text-align: right;
+    float: right;
+    display: block;
+    margin: 15px 10px 0 0;
+}
+/*===========Services===========*/
+
+#services h1 {
+    margin: 0;
+    padding: 15px 0 15px 10px;
+}
+.drp_arr {
+    float: right;
+    padding: 0 15px;
+}
+.alt_row {
+    background-color: #1c1c1c;
+    height: 100%;
+}
+/*=======Services Table===========*/
+
+table {
+    margin: 0 0 10px 40px;
+    display: none;
+}
+table th {
+    text-align: right;
+}
+th {
+    padding: 8px;
+}
+td {
+    padding: 8px 0 8px 50px;
+}
+/*=======About Us===========*/
+
+#about_body {
+    background-color: #111;
+    overflow: auto;
+}
+.abt_font_head {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 1.3750em;
+    /* 22px */
+
+    line-height: 1.25em;
+    /* 36px */
+
+    margin-top: 0.1em;
+    margin-bottom: .5000em;
+}
+.abt_font_para {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.25000em;
+    font-size: 1.1250em;
+    /* 18px */
+
+    line-height: 1.0000em;
+    /* 18px */
+
+    margin-top: 1.0000em;
+    margin-bottom: 1.0000em;
+}
+.about_main_pad {
+    padding: 20px;
+}
+.about_loc_main p {
+    width: calc(100% - 20px);
+}
+.about_img {
+    width: calc(100%);
+    border-radius: 10%;
+}
+/*=======Location===========*/
+
+#map {
+    width: 100%;
+    height: 175px;
+    background-color: #CCC;
+    display: block;
+}
+.loc_head {
+    font-size: 1.2000em;
+    /* 24px */
+}
+.loc_para {
+    font-size: 1em;
+    /* 20px */
+
+    line-height: 1.000em;
+    /* 18px */
+
+    margin: 0.75em 0 0.9000em 0;
+    font-weight: 700;
+}
+.loc_bkg {
+    background-image: url("../img/loc_mobile.jpg");
+    margin: 15px 0 0 0;
+}
+.loc_pad {
+    padding: 5px 0 5px 10px;
+}
+/*==================================================
+TABLET BREAKPOINTS
+====================================================*/
+
+@media (min-width: 400px) {
+    /*=======Navagation===========*/
+
+    .menu {
+        display: none;
+    }
+    #menuToggle {
+        display: none;
+    }
+    nav,
+    .ham_icon {
+        display: none;
+    }
+    .navmenu {
+        margin: 0;
+        background-color: #000;
+        letter-spacing: .1em;
+        position: relative;
+        top: 0;
+        font-size: .85em;
+        padding: 15px 0;
+    }
+    .navlink {
+        margin: 0;
+        width: 90%;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+    .navlink li {
+        display: inline;
+        margin: 0 auto;
+        color: #efefef;
+        border-left: solid;
+        border-width: 1px;
+    }
+    .navlink li a {
+        display: inline;
+        margin: 0 10px;
+        color: #efefef;
+        text-decoration: none;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+    }
+    .navlink li a:hover {
+        color: #b3b3b3;
+        letter-spacing: 0.17em;
+    }
+    /*=======About_Us===========*/
+
+    .about_img {
+        max-width: 30%;
+        border-radius: 10%;
+        margin-left: 5%;
+        margin-bottom: 5.55%;
+        float: right;
+        overflow: auto;
+    }
+    .abt_font_para {
+        font-family: 'Quicksand', sans-serif;
+        line-height: 1.25000em;
+        font-size: 1.1250em;
+        /* 18px */
+
+        line-height: 1.0000em;
+        /* 18px */
+    }
+    .para_two {
+        clear: both;
+        margin-top: 1.5em;
+    }
+    @media (min-width: 480px) {
+        /*=======About_Us===========*/
+
+        body {
+            width: 95%;
+            height: 100%;
+        }
+        .about_img {
+            max-width: 45%;
+            border-radius: 10%;
+            margin-bottom: 5.55%;
+            float: right;
+            overflow: auto;
+        }
+        .abt_font_head {
+            font-size: 1.6250em;
+            /* 18px */
+        }
+        .abt_font_para {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.25000em;
+            font-size: 1.250em;
+            /* 18px */
+
+            line-height: 1.0000em;
+            /* 18px */
+
+            max-width: 50%;
+        }
+    }
+    .loc_bkg {
+        width: 100%;
+        height: 450px;
+        background-image: url("../img/location.jpg");
+    }
+    @media (min-width: 625px) {
+        #main {
+            margin-top: 15px;
+            background-image: url("../img/auto_wash_lrg.jpg");
+        }
+        /*=======Nav===========*/
+
+        .navmenu {
+            font-size: 1em;
+        }
+        .loc_head {
+            font-size: 2em;
+            /* 24px */
+        }
+        .loc_para {
+            font-size: 1.5em;
+            /* 20px */
+
+            line-height: 1.000em;
+            /* 18px */
+
+            margin: 0.75em 0 0.9000em 0;
+            font-weight: 700;
+        }
+        .about_font_head {
+            font-size: 1.8250em;
+            /* 18px */
+        }
+        .abt_font_para {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.25000em;
+            font-size: 1.450em;
+            /* 18px */
+
+            line-height: 1.0000em;
+            /* 18px */
+
+            max-width: 50%;
+        }
+    }
